@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/vitalz">
+
+    <ImageView
+        android:id="@+id/imageView_vitalz"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        android:contentDescription="@string/vitalz_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/ic_vitalz_logo" />
+
+    <TextView
+        android:id="@+id/tv_vitalz_health"
+        style="@style/viewSize"
+        android:gravity="center"
+        android:text="@string/vitalz_health"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_vitalz"
+        app:layout_constraintStart_toStartOf="@+id/imageView_vitalz"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_vitalz" />
+
+    <TextView
+        android:id="@+id/tx_waiting_otp"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/waiting_for_otp"
+        android:textColor="@color/button_blue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vitalz_health" />
+
+    <TextView
+        android:id="@+id/tx_please_wait"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_24"
+        android:text="@string/please_enter"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_waiting_otp" />
+
+    <TextView
+        android:id="@+id/tx_send_to"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="@string/send_to_91"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toStartOf="@+id/tx_mobile_number"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_please_wait" />
+
+    <TextView
+        android:id="@+id/tx_mobile_number"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_8"
+        android:hint="@string/fake_mobile_number"
+        android:maxLength="10"
+        android:text=""
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tx_send_to"
+        app:layout_constraintTop_toBottomOf="@+id/tx_please_wait" />
+
+    <EditText
+        android:id="@+id/et_otp1"
+        style="@style/otp_editText"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/et_otp2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_mobile_number" />
+
+    <EditText
+        android:id="@+id/et_otp2"
+        style="@style/otp_editText"
+        android:layout_toEndOf="@+id/et_otp1"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/et_otp3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_otp1"
+        app:layout_constraintTop_toBottomOf="@+id/tx_mobile_number" />
+
+    <EditText
+        android:id="@+id/et_otp3"
+        style="@style/otp_editText"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/et_otp4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_otp2"
+        app:layout_constraintTop_toBottomOf="@+id/tx_mobile_number" />
+
+    <EditText
+        android:id="@+id/et_otp4"
+        style="@style/otp_editText"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/et_otp5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_otp3"
+        app:layout_constraintTop_toBottomOf="@+id/tx_mobile_number" />
+
+    <EditText
+        android:id="@+id/et_otp5"
+        style="@style/otp_editText"
+        android:text=""
+        app:layout_constraintEnd_toStartOf="@+id/et_otp6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_otp4"
+        app:layout_constraintTop_toBottomOf="@+id/tx_mobile_number" />
+
+    <EditText
+        android:id="@+id/et_otp6"
+        style="@style/otp_editText"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/et_otp5"
+        app:layout_constraintTop_toBottomOf="@+id/tx_mobile_number" />
+
+    <Button
+        android:id="@+id/btn_confirm_otp"
+        style="@style/button"
+        android:text="@string/confirm_otp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_otp6" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend Otp in 30 Seconds"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="@+id/btn_confirm_otp"
+        app:layout_constraintTop_toBottomOf="@+id/btn_confirm_otp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

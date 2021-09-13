@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.VitalzApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="android:windowDisablePreview">true</item>
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="titleBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+    </style>
+
+    <style name="et_address">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_100</item>
+        <item name="android:layout_marginTop">@dimen/dp_5</item>
+        <item name="android:background">@drawable/edit_text_box</item>
+        <item name="android:gravity">start</item>
+        <item name="android:inputType">text</item>
+        <item name="android:padding">@dimen/dp_8</item>
+    </style>
+
+    <style name="layout_dashboard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:layout_margin">@dimen/dp_16</item>
+        <item name="android:background">@drawable/edit_text_box</item>
+    </style>
+
+    <style name="heading_dashboard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_12</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="et_dashboard">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:background">@drawable/edit_text_box</item>
+        <item name="android:gravity">start</item>
+        <item name="android:inputType">text</item>
+        <item name="android:padding">@dimen/dp_8</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="heading_dashboard_spinner">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_5</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">@dimen/dp_8</item>
+        <item name="android:inputType">number</item>
+        <item name="android:background">@drawable/edit_text_box</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="dashboard_fields">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_5</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">start</item>
+        <item name="android:padding">@dimen/dp_8</item>
+        <item name="android:inputType">number</item>
+        <item name="android:background">@drawable/edit_text_box</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="dashboard_ble">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_32</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="dashboard_ble_battery">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_32</item>
+        <item name="android:layout_marginStart">@dimen/dp_5</item>
+        <item name="android:layout_marginTop">@dimen/dp_8</item>
+        <item name="android:text">@string/fake_time_left_unit</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+    <style name="backBtn">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/dp_20</item>
+    </style>
+
+    <style name="dateBtn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp_5</item>
+        <item name="android:background">@drawable/bg_dark</item>
+    </style>
+
+    <style name="dashboard_care_taker">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">@dimen/dp_24</item>
+        <item name="android:background">@drawable/bg_dash_board_care_taker</item>
+    </style>
+
+    <style name="otp_editText">
+        <item name="android:layout_width">@dimen/dp_50</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:layout_marginTop">@dimen/dp_16</item>
+        <item name="android:layout_marginStart">@dimen/dp_8</item>
+        <item name="android:inputType">number</item>
+        <item name="android:padding">@dimen/dp_8</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:hint">@string/fake_opt</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/edit_text_box</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_marginTop">@dimen/dp_16</item>
+        <item name="android:padding">@dimen/dp_16</item>
+        <item name="android:backgroundTint">@color/button_blue</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+    </style>
+
+
+    <style name="viewSize">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="search_et_box">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">@dimen/dp_5</item>
+        <item name="android:drawablePadding">@dimen/dp_8</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawableStart">@drawable/ic_baseline_search_24</item>
+        <item name="android:textColor">@color/button_blue</item>
+        <item name="android:textColorHint">@color/button_blue</item>
+    </style>
+
+    <style name="viewSize_one">
+        <item name="android:layout_width">@dimen/dp_50</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+    </style>
+
+    <style name="etRequestOtp">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/dp_50</item>
+        <item name="android:paddingStart">@dimen/dp_8</item>
+        <item name="android:maxLength">10</item>
+        <item name="android:inputType">number</item>
+        <item name="android:ems">10</item>
+        <item name="android:background">@drawable/edit_text_box</item>
+        <item name="android:layout_margin">@dimen/dp_32</item>
+    </style>
+
+    <style name="textViewDevice">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:layout_marginStart">@dimen/dp_16</item>
+    </style>
+
+    <style name="textView" parent="viewSize">
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginStart">@dimen/dp_20</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="viewMargin">
+        <item name="android:layout_marginStart">20dp</item>
+    </style>
+
+    <style name="viewContainer">
+        <item name="android:layout_width">@dimen/dp_220</item>
+        <item name="android:layout_height">@dimen/dp_80</item>
+        <item name="android:layout_marginTop">@dimen/dp_24</item>
+    </style>
+
+    <style name="DialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="colorAccent">@color/button_blue</item>
+    </style>
+
+    <style name="Theme.VitalzApp." parent="Theme.MaterialComponents.Light.NoActionBar">
+        ...
+        <item name="circularProgressIndicatorStyle">@style/Widget.App.CircularProgressIndicator</item>
+    </style>
+
+    <style name="Widget.App.CircularProgressIndicator" parent="Widget.MaterialComponents.CircularProgressIndicator">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.CircularProgressIndicator</item>
+        <item name="trackThickness">20dp</item>
+    </style>
+
+    <style name="ThemeOverlay.App.CircularProgressIndicator" parent="">
+        <item name="colorPrimary">@color/button_blue</item>
+    </style>
+
+</resources>

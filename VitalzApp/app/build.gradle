@@ -1,0 +1,148 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'kotlin-parcelize'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    defaultConfig {
+        applicationId names.applicationId
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.versionCode
+        versionName versions.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+    // FCM
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:28.2.0')
+
+    //messaging
+    implementation 'com.google.firebase:firebase-messaging-ktx'
+
+    // Add the dependency for the Firebase SDK for Google Analytics 
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    //UI
+    implementation "androidx.appcompat:appcompat:${library.appCompat}"
+    implementation "androidx.core:core-ktx:${library.ktx}"
+    implementation "androidx.constraintlayout:constraintlayout:${library.constarintLayout}"
+    implementation "com.google.android.material:material:${library.material}"
+
+    // Room components
+    implementation "androidx.room:room-ktx:${library.roomVersion}"
+    kapt "androidx.room:room-compiler:${library.roomVersion}"
+    androidTestImplementation "androidx.room:room-testing:${library.roomVersion}"
+
+
+    //Fragment
+    implementation "androidx.fragment:fragment-ktx:${library.fragment_ktx}"
+
+    //Lifecycle
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.4.0-alpha02"
+    implementation "androidx.lifecycle:lifecycle-extensions:${library.lifeCycle}"
+    kapt "androidx.lifecycle:lifecycle-compiler:${library.lifeCycle}"
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:${library.navigation}"
+    implementation "androidx.navigation:navigation-ui-ktx:${library.navigation}"
+
+    //Logging
+    implementation "com.jakewharton.timber:timber:${library.timber}"
+
+    //network
+    implementation "com.squareup.okhttp3:logging-interceptor:${library.logging_interceptor}"
+    implementation "com.squareup.retrofit2:retrofit:${library.retrofit}"
+    implementation "com.squareup.retrofit2:converter-gson:${library.retrofit}"
+
+    //Gson
+    implementation "com.google.code.gson:gson:${library.gson}"
+
+    //livedata
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:${library.lifeCycle}"
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${library.kotlinx_coroutines_core}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${library.kotlinx_coroutines_android}"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${library.retrofit2_kotlin_coroutines_adapter}"
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    implementation "androidx.constraintlayout:constraintlayout:2.0.4"
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //dagger-hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    //Dagger-Hilt
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03"
+    kapt "androidx.hilt:hilt-compiler:1.0.0-beta01"
+
+    // Activity KTX for viewModels()
+    implementation "androidx.activity:activity-ktx:1.2.2"
+
+    def room_version = "2.2.6"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+    // optional - Test helpers
+    testImplementation "androidx.room:room-testing:$room_version"
+
+
+    //Picasso
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    //Location
+    implementation "com.google.android.gms:play-services-location:18.0.0"
+    implementation "com.google.android.gms:play-services-places:17.0.0"
+
+    //viewModel
+    ext.compiler_version = '3.0.0-beta6'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${library.lifeCycle}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:${library.lifeCycle}"
+
+    //graph
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+}

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin="@dimen/dp_5"
+    android:padding="@dimen/dp_8">
+
+    <TextView
+        android:id="@+id/tv_patient_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:text="@string/sample_patient_name"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/button_blue"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_bp"
+        style="@style/viewSize"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_patient_name">
+
+        <ImageView
+            android:id="@+id/iv_bp"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/ic_bp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_notification_date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_bloop_pressure_count" />
+
+        <TextView
+            android:id="@+id/tv_bloop_pressure_count"
+            style="@style/viewSize"
+            android:text="@string/sample_bp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/button_Red"
+            app:layout_constraintStart_toEndOf="@+id/iv_bp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_notification_date"
+            style="@style/viewSize"
+            android:text="BP"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tv_bloop_pressure_count"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bloop_pressure_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_temp"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintEnd_toStartOf="@+id/layout_pos"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toEndOf="@+id/layout_spo2"
+        app:layout_constraintTop_toBottomOf="@id/tv_patient_name">
+
+        <ImageView
+            android:id="@+id/iv_temp"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/ic_temp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_temp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_temp_count" />
+
+        <TextView
+            android:id="@+id/tv_temp_count"
+            style="@style/viewSize"
+            android:text="@string/sample_temp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/button_Red"
+            app:layout_constraintStart_toEndOf="@+id/iv_temp"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_temp"
+            style="@style/viewSize"
+            android:text="Temp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_temp_count"
+            app:layout_constraintTop_toBottomOf="@+id/tv_temp_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_spo2"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_8"
+        app:layout_constraintEnd_toStartOf="@+id/layout_temp"
+        app:layout_constraintStart_toEndOf="@+id/layout_bp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_patient_name">
+
+        <ImageView
+            android:id="@+id/iv_spo"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/ic_spo2"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_spo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_spo_count" />
+
+        <TextView
+            android:id="@+id/tv_spo_count"
+            style="@style/viewSize"
+            android:text="@string/sample_oxygen"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/button_Red"
+            app:layout_constraintStart_toEndOf="@+id/iv_spo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_spo"
+            style="@style/viewSize"
+            android:text="Spo2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_spo_count"
+            app:layout_constraintTop_toBottomOf="@+id/tv_spo_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_pos"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_patient_name">
+
+        <ImageView
+            android:id="@+id/iv_pos"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:src="@drawable/ic_pos"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_pos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_pos_count" />
+
+        <TextView
+            android:id="@+id/tv_pos_count"
+            style="@style/viewSize"
+            android:text="@string/sample_posture"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/button_Red"
+            app:layout_constraintStart_toEndOf="@+id/iv_pos"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_pos"
+            style="@style/viewSize"
+            android:text="Posture"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/tv_pos_count"
+            app:layout_constraintTop_toBottomOf="@+id/tv_pos_count" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

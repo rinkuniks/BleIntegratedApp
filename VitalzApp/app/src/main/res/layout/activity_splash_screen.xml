@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/vitalz">
+
+    <ImageView
+        android:id="@+id/imageView_vitalz"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="@string/vitalz_logo"
+        app:srcCompat="@drawable/ic_vitalz_logo" />
+
+    <TextView
+        style="@style/viewSize"
+        android:gravity="center"
+        android:text="@string/vitalz_health"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_vitalz"
+        app:layout_constraintStart_toStartOf="@+id/imageView_vitalz"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_vitalz" />
+
+    <Button
+        android:id="@+id/btn_get_started"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_60"
+        android:layout_margin="@dimen/dp_32"
+        android:backgroundTint="@color/button_Red"
+        android:ems="15"
+        android:text="@string/get_started"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

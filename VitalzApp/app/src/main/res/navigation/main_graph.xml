@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/userSelectionFragment2"
+        android:name="com.technoidentity.vitalz.home.UserSelectionFragment"
+        android:label="UserSelectionFragment">
+        <action
+            android:id="@+id/action_userSelectionFragment2_to_careTakerMobileLoginFragment"
+            app:destination="@id/careTakerMobileLoginFragment" />
+        <action
+            android:id="@+id/action_userSelectionFragment2_to_doctorNurseLoginFragment"
+            app:destination="@id/doctorNurseLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/careTakerMobileLoginFragment"
+        android:name="com.technoidentity.vitalz.user.CareTakerMobileLoginFragment"
+        android:label="CareTakerMobileLoginFragment">
+        <action
+            android:id="@+id/action_careTakerMobileLoginFragment_to_careTakerMobileOTPFragment"
+            app:destination="@id/careTakerMobileOTPFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorNurseLoginFragment"
+        android:name="com.technoidentity.vitalz.user.DoctorNurseLoginFragment"
+        android:label="DoctorNurseLoginFragment">
+        <action
+            android:id="@+id/action_doctorNurseLoginFragment_to_addDeviceFragment"
+            app:destination="@id/addDeviceFragment" />
+        <action
+            android:id="@+id/action_doctorNurseLoginFragment_to_singlePatientDashboardFragment"
+            app:destination="@id/singlePatientDashboardFragment" />
+        <action
+            android:id="@+id/action_doctorNurseLoginFragment_to_multiPatientDashboardFragment"
+            app:destination="@id/multiPatientDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/careTakerMobileOTPFragment"
+        android:name="com.technoidentity.vitalz.user.CareTakerMobileOTPFragment"
+        android:label="CareTakerMobileOTPFragment">
+        <action
+            android:id="@+id/action_careTakerMobileOTPFragment_to_hospitalListFragment"
+            app:destination="@id/hospitalListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlePatientDetailFragment"
+        android:name="com.technoidentity.vitalz.dashboard.DashboardDetailsFragment"
+        android:label="DashboardDetailsFragment" />
+    <fragment
+        android:id="@+id/addDeviceFragment"
+        android:name="com.technoidentity.vitalz.bluetooth.ui.AddDeviceFragment"
+        android:label="AddDeviceFragment">
+        <action
+            android:id="@+id/action_addDeviceFragment_to_bleScanResultFragment"
+            app:destination="@id/bleScanResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/multiPatientDashboardFragment"
+        android:name="com.technoidentity.vitalz.dashboard.MultiPatientDashboardFragment"
+        android:label="MultiPatientDashboardFragment">
+        <argument
+            android:name="patientId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_multiPatientDashboardFragment_to_singlePatientDetailFragment"
+            app:destination="@id/singlePatientDetailFragment" />
+        <action
+            android:id="@+id/action_multiPatientDashboardFragment_to_singlePatientDashboardFragment"
+            app:destination="@id/singlePatientDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deviceDetailsFragment"
+        android:name="com.technoidentity.vitalz.bluetooth.ui.DeviceDetailsFragment"
+        android:label="DeviceDetailsFragment">
+        <action
+            android:id="@+id/action_deviceDetailsFragment_to_multiPatientDashboardFragment"
+            app:destination="@id/multiPatientDashboardFragment" />
+        <action
+            android:id="@+id/action_deviceDetailsFragment_to_singlePatientDashboardFragment"
+            app:destination="@id/singlePatientDashboardFragment" />
+        <action
+            android:id="@+id/action_deviceDetailsFragment_to_patientProfileFragment"
+            app:destination="@id/patientProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlePatientDashboardFragment"
+        android:name="com.technoidentity.vitalz.dashboard.SinglePatientDashboardFragment"
+        android:label="SinglePatientDashboardFragment">
+        <action
+            android:id="@+id/action_singlePatientDashboardFragment_to_singlePatientDetailFragment"
+            app:destination="@id/singlePatientDetailFragment" />
+        <action
+            android:id="@+id/action_singlePatientDashboardFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_singlePatientDashboardFragment_to_userSelectionFragment2"
+            app:destination="@id/userSelectionFragment2" />
+        <action
+            android:id="@+id/action_singlePatientDashboardFragment_to_patientProfileFragment"
+            app:destination="@id/patientProfileFragment" />
+        <argument
+            android:name="patchId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientProfileFragment"
+        android:name="com.technoidentity.vitalz.hospital.PatientProfileFragment"
+        android:label="PatientProfileFragment" />
+    <fragment
+        android:id="@+id/hospitalListFragment"
+        android:name="com.technoidentity.vitalz.hospital.HospitalListFragment"
+        android:label="HospitalListFragment">
+        <action
+            android:id="@+id/action_hospitalListFragment_to_patientListFragment"
+            app:destination="@id/patientListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/patientListFragment"
+        android:name="com.technoidentity.vitalz.hospital.PatientListFragment"
+        android:label="PatientListFragment">
+        <action
+            android:id="@+id/action_patientListFragment_to_singlePatientDashboardFragment"
+            app:destination="@id/singlePatientDashboardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.technoidentity.vitalz.user.NotificationsFragment"
+        android:label="NotificationsFragment" />
+    <fragment
+        android:id="@+id/bleScanResultFragment"
+        android:name="com.technoidentity.vitalz.bluetooth.ui.BleScanResultFragment"
+        android:label="BleScanResultFragment" >
+        <action
+            android:id="@+id/action_bleScanResultFragment_to_deviceDetailsFragment"
+            app:destination="@id/deviceDetailsFragment" />
+        <action
+            android:id="@+id/action_bleScanResultFragment_to_addDeviceFragment"
+            app:destination="@id/addDeviceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.technoidentity.vitalz.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_singlePatientDashboardFragment"
+            app:destination="@id/singlePatientDashboardFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_doctorNurseLoginFragment"
+            app:destination="@id/doctorNurseLoginFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_addDeviceFragment"
+            app:destination="@id/addDeviceFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_userSelectionFragment2"
+            app:destination="@id/userSelectionFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.technoidentity.vitalz.user.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_userSelectionFragment2"
+            app:destination="@id/userSelectionFragment2" />
+    </fragment>
+</navigation>

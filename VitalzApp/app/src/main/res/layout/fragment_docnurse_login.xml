@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/vitalz">
+
+    <ImageView
+        android:id="@+id/imageView_vitalz"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        android:contentDescription="@string/vitalz_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        app:srcCompat="@drawable/ic_vitalz_logo" />
+
+    <TextView
+        android:id="@+id/tv_vitalz_health"
+        style="@style/viewSize"
+        android:gravity="center"
+        android:text="@string/vitalz_health"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_vitalz"
+        app:layout_constraintStart_toStartOf="@+id/imageView_vitalz"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_vitalz" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_login"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@color/white"
+        android:padding="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vitalz_health">
+
+        <TextView
+            android:id="@+id/tv_user_name"
+            style="@style/heading_dashboard"
+            android:drawablePadding="@dimen/dp_16"
+            android:gravity="start"
+            android:text="@string/username"
+            app:drawableStartCompat="@drawable/ic_username"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_user_name"
+            style="@style/et_dashboard"
+            android:layout_width="@dimen/dp_300"
+            android:text="VITALZ-6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+        <TextView
+            android:id="@+id/tv_password"
+            style="@style/heading_dashboard"
+            android:drawablePadding="@dimen/dp_16"
+            android:gravity="start"
+            android:text="@string/password"
+            app:drawableStartCompat="@drawable/ic_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_user_name" />
+
+        <EditText
+            android:id="@+id/et_password"
+            style="@style/et_dashboard"
+            android:layout_width="@dimen/dp_300"
+            android:text="12345"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password" />
+
+        <ImageView
+            android:id="@+id/iv_password_visibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:src="@drawable/ic_baseline_visibility_off_24"
+            app:layout_constraintEnd_toEndOf="@+id/et_password"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password" />
+
+        <Button
+            android:id="@+id/btn_login_doc_nurse"
+            style="@style/button"
+            android:layout_width="@dimen/dp_300"
+            android:text="@string/login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

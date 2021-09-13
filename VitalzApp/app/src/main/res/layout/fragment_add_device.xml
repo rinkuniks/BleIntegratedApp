@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/vitalz">
+
+    <ImageView
+        android:id="@+id/imageView_vitalz"
+        style="@style/viewSize"
+        android:contentDescription="@string/vitalz_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/vitalz_icon" />
+
+    <ImageView
+        android:id="@+id/imageView_add_device"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_32"
+        android:contentDescription="@string/vitalz_logo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView_vitalz"
+        app:srcCompat="@mipmap/remote_add_device" />
+
+    <TextView
+        android:id="@+id/tx_start_device"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_32"
+        android:gravity="center"
+        android:text="@string/start_using_the_device"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_add_device"
+        />
+
+    <Button
+        android:id="@+id/add_device_btn"
+        style="@style/button"
+        android:text="@string/add_device"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tx_start_device" />
+
+<!--     <include layout="@layout/layout_button"-->
+<!--         android:id="@+id/add_device"-->
+<!--         app:layout_constraintEnd_toEndOf="parent"-->
+<!--         app:layout_constraintStart_toStartOf="parent"-->
+<!--         app:layout_constraintTop_toBottomOf="@+id/tx_start_device"/>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

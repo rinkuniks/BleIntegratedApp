@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/vitalz">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/app_bar_layout"
+        style="@style/titleBar"
+        android:background="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/layout_heart_rate_calculator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back_btn"
+            style="@style/backBtn"
+            android:contentDescription="@string/back_btn"
+            android:src="@drawable/ic_back_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_heart_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/heart_rate"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/textColor_red"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_heart_rate_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_border"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_startDate_select"
+            style="@style/dateBtn"
+            android:padding="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_5"
+            app:layout_constraintEnd_toStartOf="@+id/layout_endDate_select"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_start_date"
+                style="@style/viewSize"
+                android:text="@string/start_date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/button_blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_select_date"
+                style="@style/viewSize"
+                android:src="@drawable/ic_baseline_calendar_today_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_start_date" />
+
+            <TextView
+                android:id="@+id/tv_selected_start_date"
+                style="@style/viewSize"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_select_date"
+                app:layout_constraintStart_toEndOf="@+id/iv_select_date"
+                app:layout_constraintTop_toTopOf="@+id/iv_select_date" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_endDate_select"
+            style="@style/dateBtn"
+            android:clickable="false"
+            android:layout_marginStart="@dimen/dp_5"
+            android:padding="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/layout_startDate_select"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_end_date"
+                style="@style/viewSize"
+                android:text="@string/end_date"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/button_grey"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_selectEnd_date"
+                style="@style/viewSize"
+                android:src="@drawable/ic_baseline_calendar_today_24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_end_date"
+                app:tint="@color/button_grey" />
+
+            <TextView
+                android:id="@+id/tv_selected_end_date"
+                style="@style/viewSize"
+                android:text=""
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/button_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_selectEnd_date"
+                app:layout_constraintStart_toEndOf="@+id/iv_selectEnd_date"
+                app:layout_constraintTop_toTopOf="@+id/iv_selectEnd_date" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_heart_cal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@drawable/bg_dark"
+            android:padding="@dimen/dp_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_endDate_select">
+
+            <TextView
+                android:id="@+id/tv_average"
+                style="@style/viewSize"
+                android:text="@string/average"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/button_blue"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_min"
+                style="@style/viewSize"
+                android:text="@string/min"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/button_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_max"
+                app:layout_constraintStart_toEndOf="@+id/tv_average"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_max"
+                style="@style/viewSize"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:text="@string/max"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/button_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_average_rate"
+                style="@style/viewSize"
+                android:text="@string/fake_opt"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_average" />
+
+            <TextView
+                android:id="@+id/tv_avg_bpm"
+                style="@style/viewSize"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="@string/bpm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/tv_average_rate"
+                app:layout_constraintTop_toBottomOf="@+id/tv_average" />
+
+            <TextView
+                android:id="@+id/tv_min_rate"
+                style="@style/viewSize"
+                android:text="@string/fake_opt"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/tv_max_rate"
+                app:layout_constraintStart_toEndOf="@+id/tv_avg_bpm"
+                app:layout_constraintTop_toBottomOf="@+id/tv_min" />
+
+            <TextView
+                android:id="@+id/tv_min_bpm"
+                style="@style/viewSize"
+                android:layout_marginStart="10dp"
+                android:text="@string/bpm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@+id/tv_min_rate"
+                app:layout_constraintTop_toBottomOf="@+id/tv_average" />
+
+            <TextView
+                android:id="@+id/tv_max_rate"
+                style="@style/viewSize"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:text="@string/fake_opt"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_max_bpm"
+                app:layout_constraintTop_toBottomOf="@+id/tv_max" />
+
+            <TextView
+                android:id="@+id/tv_max_bpm"
+                style="@style/viewSize"
+                android:layout_marginStart="@dimen/dp_5"
+                android:text="@string/bpm"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_max" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/heart_bar_chart"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_heart_cal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

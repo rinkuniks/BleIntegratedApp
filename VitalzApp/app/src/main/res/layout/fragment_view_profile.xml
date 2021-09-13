@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@mipmap/vitalz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/app_bar_layout"
+            style="@style/titleBar"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_back_btn"
+                style="@style/backBtn"
+                android:contentDescription="@string/back_btn"
+                android:src="@drawable/ic_back_btn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView_vitalz"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_30"
+                android:contentDescription="@string/vitalz_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.4"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_vitalz_logo" />
+
+            <TextView
+                android:id="@+id/tv_vitalz_health"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/vitalz_health"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView_vitalz"
+                app:layout_constraintStart_toEndOf="@+id/imageView_vitalz"
+                app:layout_constraintTop_toTopOf="@+id/imageView_vitalz" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            style="@style/layout_dashboard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/app_bar_layout">
+
+            <TextView
+                android:id="@+id/tv_user_name"
+                style="@style/heading_dashboard"
+                android:text="@string/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/et_name"
+                style="@style/et_dashboard"
+                android:text=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                style="@style/heading_dashboard"
+                android:text="@string/age"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+            <TextView
+                android:id="@+id/et_age"
+                style="@style/dashboard_fields"
+                android:layout_width="@dimen/dp_150"
+                android:text=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                style="@style/heading_dashboard"
+                android:layout_width="@dimen/dp_150"
+                android:text="@string/gender"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_age"
+                app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+            <TextView
+                android:id="@+id/et_gender"
+                style="@style/dashboard_fields"
+                android:layout_width="@dimen/dp_150"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_age"
+                app:layout_constraintTop_toBottomOf="@+id/tv_age" />
+
+            <TextView
+                android:id="@+id/tv_height"
+                style="@style/heading_dashboard"
+                android:text="@string/height"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_age" />
+
+            <TextView
+                android:id="@+id/et_height"
+                style="@style/dashboard_fields"
+                android:layout_width="@dimen/dp_150"
+                android:text=""
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_height" />
+
+            <TextView
+                android:id="@+id/tv_weight"
+                style="@style/heading_dashboard"
+                android:layout_width="@dimen/dp_150"
+                android:text="@string/weight"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_age"
+                app:layout_constraintTop_toBottomOf="@+id/et_gender" />
+
+            <TextView
+                android:id="@+id/et_weight"
+                style="@style/dashboard_fields"
+                android:layout_width="@dimen/dp_150"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_age"
+                app:layout_constraintTop_toBottomOf="@+id/tv_weight" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/heading_dashboard"
+                android:gravity="start"
+                android:text="@string/address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_weight" />
+
+            <TextView
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_100"
+                android:layout_marginTop="@dimen/dp_5"
+                android:background="@drawable/edit_text_box"
+                android:gravity="start"
+                android:inputType="text"
+                android:padding="@dimen/dp_8"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_address" />
+
+            <TextView
+                android:id="@+id/tv_contact"
+                style="@style/heading_dashboard"
+                android:text="@string/contact_number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_address" />
+
+            <TextView
+                android:id="@+id/tv_contact_number"
+                style="@style/et_dashboard"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_contact" />
+
+            <TextView
+                android:id="@+id/tv_emergency_contact_name"
+                style="@style/heading_dashboard"
+                android:text="@string/emergency_contact_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_contact_number" />
+
+            <TextView
+                android:id="@+id/et_emergency_contact_name"
+                style="@style/et_dashboard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_emergency_contact_name" />
+
+            <TextView
+                android:id="@+id/tv_emergency_contact_number"
+                style="@style/heading_dashboard"
+                android:text="@string/emergency_contact_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_emergency_contact_name" />
+
+            <TextView
+                android:id="@+id/et_emergency_contact_number"
+                style="@style/et_dashboard"
+                android:inputType="number"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_emergency_contact_number" />
+
+            <TextView
+                android:id="@+id/tv_attending_doctor"
+                style="@style/heading_dashboard"
+                android:text="@string/attending_doctor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_emergency_contact_number" />
+
+            <TextView
+                android:id="@+id/et_attending_doctor"
+                style="@style/et_dashboard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_attending_doctor" />
+
+            <TextView
+                android:id="@+id/tv_id_hospital"
+                style="@style/heading_dashboard"
+                android:text="Hospital Id"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/et_attending_doctor" />
+
+            <TextView
+                android:id="@+id/et_id_hospital"
+                style="@style/et_dashboard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_id_hospital" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

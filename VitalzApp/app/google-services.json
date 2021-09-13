@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316640118275",
+    "project_id": "vitalz7",
+    "storage_bucket": "vitalz7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316640118275:android:29148e8e22667acfe03036",
+        "android_client_info": {
+          "package_name": "com.technoidentity.vitalz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316640118275-e72k5hkcpso3h5091cqsfbcktks398o8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZQOJEehhqBThW4V-4Znzy0zXFHmhodWE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316640118275-e72k5hkcpso3h5091cqsfbcktks398o8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

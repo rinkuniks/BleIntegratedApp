@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="get_started">Get Started</string>
+    <string name="vitalz_logo">vitalz logo</string>
+    <string name="request_otp">Request OTP</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="waiting_for_otp">Waiting For OTP</string>
+    <string name="please_enter">Please Enter the Verification code</string>
+    <string name="send_to_91">send to +91-</string>
+    <string name="fake_mobile_number">9876543210</string>
+    <string name="fake_opt">0</string>
+    <string name="confirm_otp">Confirm OTP</string>
+    <string name="start_using_the_device">Start using the Device</string>
+    <string name="add_device">Add Device</string>
+    <string name="patch_id">Patch ID</string>
+    <string name="status">Status</string>
+    <string name="connection">Connection</string>
+    <string name="fake_patch_id">763635</string>
+    <string name="fake_status">Active</string>
+    <string name="back_btn">back Btn</string>
+    <string name="fake_time_left">243hrs</string>
+    <string name="user_registration">User Registration</string>
+    <string name="name">Name</string>
+    <string name="age">Age</string>
+    <string name="please_select_user">Please select User</string>
+    <string name="random_images">random Images</string>
+    <string name="hospital">Hospital</string>
+    <string name="operative">Operative</string>
+    <string name="patient">Patient</string>
+    <string name="care_taker">Care Taker</string>
+    <string name="height">Height</string>
+    <string name="address">Address</string>
+    <string name="photo">Photo</string>
+    <string name="browse">browse</string>
+    <string name="contact_number">Phone Number</string>
+    <string name="doctor_contact_number">Doctor Contact Number</string>
+    <string name="list_of_medications">List of Medications</string>
+    <string name="average">Average</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="bpm">BPM</string>
+    <string name="weight">Weight</string>
+    <string name="emergency_contact_name">Emergency Contact Name</string>
+    <string name="emergency_contact_number">Emergency Contact Number</string>
+    <string name="attending_doctor">Attending Doctor</string>
+    <string name="submit">Submit</string>
+    <string name="username">Username *</string>
+
+    //Toast Messages
+    <string name="empty">Please enter Mobile Number</string>
+    <string name="shortLength">Please enter 10 Digits</string>
+    <string name="invalid">Please enter Valid Mobile Number</string>
+    <string name="unknown">Please Contact Admin/Hospital</string>
+    <string name="vitalz_health">VITALZ HEALTH</string>
+</resources>

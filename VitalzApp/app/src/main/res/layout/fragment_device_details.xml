@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@mipmap/vitalz">
+
+    <ImageView
+        android:id="@+id/imageView_vitalz"
+        style="@style/viewSize"
+        android:contentDescription="@string/vitalz_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/vitalz_icon" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/viewSize"
+        android:id="@+id/device_details"
+        android:layout_margin="@dimen/dp_32"
+        android:background="@drawable/display_text_box"
+        android:paddingStart="@dimen/dp_40"
+        android:paddingTop="@dimen/dp_32"
+        android:paddingEnd="@dimen/dp_40"
+        android:paddingBottom="@dimen/dp_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_vitalz">
+
+        <ImageView
+            android:id="@+id/imageView_battery"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:contentDescription="@string/vitalz_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/vitalz_icon" />
+
+        <TextView
+            android:id="@+id/tx_patch_id"
+            style="@style/textViewDevice"
+            android:text="@string/patch_id"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/tx_status"
+            app:layout_constraintStart_toEndOf="@+id/imageView_battery"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tx_status"
+            style="@style/textViewDevice"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/battery"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/tx_connection"
+            app:layout_constraintStart_toEndOf="@+id/imageView_battery"
+            app:layout_constraintTop_toBottomOf="@+id/tx_patch_id" />
+
+        <TextView
+            android:id="@+id/tx_connection"
+            style="@style/textViewDevice"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="@string/connection"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView_battery"
+            app:layout_constraintTop_toBottomOf="@+id/tx_status" />
+
+        <TextView
+            android:id="@+id/patch_id"
+            style="@style/textViewDevice"
+            android:hint="@string/fake_patch_id"
+            android:text=""
+            android:textColor="@color/button_blue"
+            android:textColorHint="@color/button_blue"
+            app:layout_constraintBottom_toTopOf="@+id/battery"
+            app:layout_constraintStart_toEndOf="@id/tx_connection"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/battery"
+            style="@style/textViewDevice"
+            android:layout_marginTop="@dimen/dp_16"
+            android:hint="@string/fake_status"
+            android:text="87"
+            android:textColor="@color/button_blue"
+            android:textColorHint="@color/button_blue"
+            app:layout_constraintBottom_toTopOf="@+id/connection"
+            app:layout_constraintStart_toEndOf="@id/tx_connection"
+            app:layout_constraintTop_toBottomOf="@+id/patch_id" />
+
+        <TextView
+            android:id="@+id/connection"
+            style="@style/textViewDevice"
+            android:layout_marginTop="@dimen/dp_16"
+            android:hint="@string/fake_connection"
+            android:text=""
+            android:textColor="@color/button_blue"
+            android:textColorHint="@color/button_blue"
+            app:layout_constraintStart_toEndOf="@id/tx_connection"
+            app:layout_constraintTop_toBottomOf="@+id/battery" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/patient_details_btn"
+        style="@style/button"
+        android:layout_marginTop="72dp"
+        android:text="@string/patient_details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/device_details" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

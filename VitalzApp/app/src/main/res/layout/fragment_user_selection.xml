@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/vitalz">
+
+    <ImageView
+        android:id="@+id/imageView_vitalz"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        android:contentDescription="@string/vitalz_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/ic_vitalz_logo" />
+
+    <TextView
+        android:id="@+id/tv_vitalz_health"
+        style="@style/viewSize"
+        android:gravity="center"
+        android:text="@string/vitalz_health"
+        android:textSize="30sp"
+        android:layout_marginTop="@dimen/dp_8"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_vitalz"
+        app:layout_constraintStart_toStartOf="@+id/imageView_vitalz"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_vitalz" />
+
+    <TextView
+        android:id="@+id/tv_select_user"
+        style="@style/viewSize"
+        android:layout_marginTop="@dimen/dp_32"
+        android:text="@string/please_select_user"
+        android:textColor="@color/button_blue"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vitalz_health" />
+
+    <View
+        android:id="@+id/hospital_layout"
+        style="@style/viewContainer"
+        android:background="@drawable/bg_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_select_user" />
+
+    <ImageView
+        android:id="@+id/iv_hs_operative"
+        style="@style/viewSize"
+        android:elevation="@dimen/dp_5"
+        android:src="@drawable/ic_hs_operative"
+        app:layout_constraintBottom_toBottomOf="@id/hospital_layout"
+        app:layout_constraintEnd_toEndOf="@id/hospital_layout"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="@id/hospital_layout"
+        app:layout_constraintTop_toTopOf="@id/hospital_layout"
+        app:layout_constraintVertical_bias="0.48000002" />
+
+    <TextView
+        android:id="@+id/tv_hospital"
+        style="@style/textView"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="@string/hospital"
+        app:layout_constraintStart_toEndOf="@id/iv_hs_operative"
+        app:layout_constraintTop_toTopOf="@id/hospital_layout" />
+
+    <TextView
+        android:id="@+id/tv_operative"
+        style="@style/textView"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:text="@string/operative"
+        app:layout_constraintBottom_toBottomOf="@id/hospital_layout"
+        app:layout_constraintStart_toEndOf="@id/iv_hs_operative" />
+
+    <View
+        android:id="@+id/patient_care_layout"
+        style="@style/viewContainer"
+        android:background="@drawable/bg_border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hospital_layout" />
+
+    <ImageView
+        android:id="@+id/iv_patient"
+        style="@style/viewSize"
+        android:elevation="@dimen/dp_5"
+        android:src="@drawable/ic_patient"
+        app:layout_constraintBottom_toBottomOf="@id/patient_care_layout"
+        app:layout_constraintEnd_toEndOf="@+id/patient_care_layout"
+        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintStart_toStartOf="@+id/patient_care_layout"
+        app:layout_constraintTop_toTopOf="@id/patient_care_layout"
+        app:layout_constraintVertical_bias="0.422" />
+
+    <TextView
+        android:id="@+id/tv_patient"
+        style="@style/textView"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="@string/patient"
+        app:layout_constraintStart_toEndOf="@id/iv_patient"
+        app:layout_constraintTop_toTopOf="@id/patient_care_layout" />
+
+    <TextView
+        android:id="@+id/tv_care_taker"
+        style="@style/textView"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:text="@string/care_taker"
+        app:layout_constraintBottom_toBottomOf="@id/patient_care_layout"
+        app:layout_constraintStart_toEndOf="@id/iv_patient" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
